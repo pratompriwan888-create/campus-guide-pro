@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>河南师范大学（平原湖校区）· 2026新生指南 · PRO</title>
+<style>
+:root{
+  --blue:#1A73E8;--blue-dark:#1557B0;--orange:#E37400;--green:#188038;
+  --red:#C5221F;--pink:#E9408A;--purple:#7B1FA2;--gray:#5F6368;
+  --light:#F8F9FA;--card:#FFFFFF;--text:#202124;--subtext:#5F6368;
+  --radius:18px;--shadow:0 2px 12px rgba(0,0,0,.06);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;-webkit-tap-highlight-color:transparent;scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;
+  background:#F1F3F4;color:var(--text);min-height:100vh;line-height:1.65;padding-bottom:3rem;
+}
+
+/* ===== Hero Banner ===== */
+.hero{
+  background:linear-gradient(155deg,#1A73E8 0%,#4285F4 35%,#0D47A1 80%,#7B1FA2 100%);
+  color:#fff;padding:2rem 1.2rem 2.5rem;text-align:center;position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;top:-60px;right:-50px;width:200px;height:200px;
+  background:rgba(255,255,255,.04);border-radius:50%;
+}
+.hero::after{
+  content:'';position:absolute;bottom:-30px;left:-30px;width:120px;height:120px;
+  background:rgba(255,255,255,.04);border-radius:50%;
+}
+.hero h1{font-size:1.5rem;font-weight:800;position:relative;z-index:1;line-height:1.4}
+.hero h1 .wave{display:inline-block;animation:wave 1s infinite;transform-origin:70% 70%}
+@keyframes wave{0%,100%{transform:rotate(0)}25%{transform:rotate(20deg)}75%{transform:rotate(-15deg)}}
+.hero .hero-badge{
+  display:inline-block;background:rgba(255,255,255,.18);padding:.35rem 1rem;
+  border-radius:20px;font-size:.85rem;font-weight:600;margin-top:.6rem;position:relative;z-index:1
+}
+.hero .hero-tagline{font-size:.88rem;opacity:.85;margin-top:.5rem;position:relative;z-index:1;line-height:1.5}
+.hero .hero-stats{display:flex;justify-content:center;gap:1.5rem;margin-top:1rem;position:relative;z-index:1}
+.hero-stat{text-align:center}
+.hero-stat .num{font-size:1.3rem;font-weight:800}
+.hero-stat .lbl{font-size:.7rem;opacity:.7}
+
+/* ===== Timeline Nav ===== */
+.timeline-nav{
+  background:#fff;padding:.6rem 1rem;position:sticky;top:0;z-index:100;
+  box-shadow:0 1px 6px rgba(0,0,0,.06);overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch
+}
+.timeline-nav::-webkit-scrollbar{display:none}
+.tnav-item{
+  display:inline-block;padding:.45rem .9rem;margin-right:.4rem;border-radius:20px;
+  font-size:.82rem;font-weight:600;color:var(--gray);text-decoration:none;
+  transition:all .2s;background:#F1F3F4
+}
+.tnav-item:active{background:#E8EAED}
+.tnav-item.warn{background:#FCE8E6;color:var(--red)}
+.tnav-item.hot{background:#FFF3E0;color:var(--orange)}
+
+/* ===== Section ===== */
+.sec{margin:1.2rem .75rem 0}
+.sec-title{
+  display:flex;align-items:center;gap:.5rem;padding:.7rem 0 .5rem;
+  font-size:1.1rem;font-weight:800;color:var(--text)
+}
+.sec-title .sicon{font-size:1.3rem}
+.sec-title .stag{font-size:.7rem;padding:.15rem .55rem;border-radius:10px;font-weight:700}
+.stag-warn{background:#FCE8E6;color:var(--red)}
+.stag-new{background:#E8F5E9;color:var(--green)}
+.stag-hot{background:#FFF3E0;color:var(--orange)}
+
+/* ===== Card ===== */
+.card{
+  background:var(--card);border-radius:var(--radius);padding:1rem 1.1rem;
+  margin-bottom:.7rem;box-shadow:var(--shadow)
+}
+.card h4{font-size:.98rem;font-weight:700;margin-bottom:.5rem;color:var(--text)}
+.card h5{font-size:.9rem;font-weight:600;margin:.6rem 0 .3rem;color:var(--text)}
+
+/* ===== Senior Note (学长提醒) ===== */
+.senior-note{
+  display:flex;align-items:flex-start;gap:.6rem;background:#FFFDE7;border-left:4px solid #F9AB00;
+  border-radius:0 14px 14px 0;padding:.7rem .85rem;margin:.6rem 0;font-size:.85rem;color:#5D4037;line-height:1.5
+}
+.senior-note .sn-avatar{font-size:1.6rem;flex-shrink:0}
+.senior-note strong{color:#E65100}
+
+/* ===== Checklist ===== */
+.checklist{list-style:none}
+.checklist li{
+  display:flex;align-items:center;padding:.5rem 0;border-bottom:1px solid #F1F3F4;
+  font-size:.9rem;cursor:pointer;touch-action:manipulation;transition:all .15s
+}
+.checklist li:last-child{border-bottom:none}
+.checklist li.checked{color:#9AA0A6;text-decoration:line-through}
+.check-box{width:1.35rem;height:1.35rem;border:2px solid #DADCE0;border-radius:6px;margin-right:.65rem;
+  flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .2s;font-size:.75rem;color:#fff}
+.checklist li.checked .check-box{background:var(--green);border-color:var(--green)}
+.check-counter{margin-top:.5rem;font-size:.82rem;color:var(--gray);text-align:right}
+.check-counter span{color:var(--green);font-weight:700}
+
+/* ===== Steps ===== */
+.steps{display:flex;flex-direction:column;gap:.25rem}
+.step-row{display:flex;align-items:center}
+.step-num{width:2rem;height:2rem;border-radius:50%;background:var(--blue);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:.82rem;font-weight:700;
+  flex-shrink:0;margin-right:.75rem}
+.step-text{font-size:.9rem;flex:1}
+.step-arrow{color:#DADCE0;font-size:.9rem;text-align:center;padding:.1rem 0}
+
+/* ===== Accordion ===== */
+.acc-item{border-bottom:1px solid #F1F3F4}
+.acc-head{
+  display:flex;align-items:center;padding:.75rem 0;cursor:pointer;
+  font-size:.92rem;font-weight:600;touch-action:manipulation;
+  user-select:none;-webkit-user-select:none
+}
+.acc-head .acc-arrow{font-size:.75rem;color:var(--gray);margin-left:auto;transition:transform .25s}
+.acc-item.open .acc-arrow{transform:rotate(180deg)}
+.acc-body{max-height:0;overflow:hidden;transition:max-height .35s ease;font-size:.88rem;color:#3C4043;line-height:1.7}
+.acc-item.open .acc-body{max-height:30rem;padding-bottom:.5rem}
+
+/* ===== Building Grid ===== */
+.building-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.building-item{
+  background:#fff;border:2px solid #E8EAED;border-radius:14px;padding:.8rem .6rem;
+  text-align:center;cursor:pointer;touch-action:manipulation;transition:all .15s
+}
+.building-item:active{background:#E8F0FE;border-color:var(--blue);transform:scale(.96)}
+.building-item .bi-icon{font-size:1.7rem;display:block;margin-bottom:.2rem}
+.building-item .bi-name{font-size:.92rem;font-weight:700;color:var(--text);display:block}
+.building-item .bi-desc{font-size:.72rem;color:var(--gray);display:block;margin-top:.1rem;line-height:1.3}
+
+/* ===== Snack Btn ===== */
+.snack-btn{
+  display:flex;align-items:center;background:#FFF3E0;border:2px solid #FBBC04;
+  border-radius:12px;padding:.75rem .85rem;cursor:pointer;touch-action:manipulation;
+  transition:all .15s;margin-bottom:.4rem
+}
+.snack-btn:active{background:#FDE68A;transform:scale(.98)}
+.snack-icon{font-size:1.5rem;margin-right:.55rem}
+.snack-text{flex:1;font-size:.9rem;font-weight:600;color:#E65100}
+.snack-arrow{color:#F9AB00;font-size:1.2rem}
+
+/* ===== Dorm Good List ===== */
+.good-grid{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin:.5rem 0}
+.good-item{
+  background:#F8F9FA;border-radius:12px;padding:.7rem;text-align:center;font-size:.82rem;line-height:1.4
+}
+.good-item .gi-emoji{font-size:1.4rem;margin-bottom:.15rem}
+.good-item .gi-name{font-weight:700;color:var(--text)}
+.good-item .gi-why{font-size:.72rem;color:var(--gray);margin-top:.1rem}
+
+/* ===== QR Section ===== */
+.qr-section{
+  background:linear-gradient(135deg,#1A73E8,#1557B0);color:#fff;text-align:center;
+  padding:2rem 1rem;border-radius:18px;margin:1.5rem .75rem
+}
+.qr-section h3{font-size:1.1rem;margin-bottom:.3rem}
+.qr-section .qr-img-box{width:180px;height:180px;border-radius:16px;overflow:hidden;margin:.6rem auto;background:#fff}
+.qr-section .qr-img-box img{width:100%;height:100%;display:block;object-fit:cover}
+.qr-section .qr-tip{font-size:.95rem;font-weight:600;color:#FFF9C4;margin-top:.4rem}
+
+/* ===== Welcome Modal ===== */
+.welcome-overlay{
+  display:none;position:fixed;top:0;left:0;right:0;bottom:0;
+  background:rgba(0,0,0,.55);z-index:300;justify-content:center;align-items:center;padding:1rem
+}
+.welcome-overlay.show{display:flex}
+.welcome-dialog{
+  background:#fff;border-radius:20px;padding:1.8rem 1.5rem 1.5rem;
+  max-width:320px;width:100%;text-align:center;animation:bounceIn .4s ease
+}
+@keyframes bounceIn{0%{transform:scale(.7);opacity:0}60%{transform:scale(1.05)}100%{transform:scale(1);opacity:1}}
+.wl-btn{
+  display:inline-block;background:var(--blue);color:#fff;padding:.7rem 2.5rem;
+  border-radius:24px;font-size:.93rem;font-weight:600;cursor:pointer;border:none;touch-action:manipulation
+}
+.wl-btn:active{opacity:.8}
+
+/* ===== Float Btn ===== */
+.float-top{
+  position:fixed;top:12px;right:12px;z-index:200;
+  background:linear-gradient(135deg,#E37400,#C5221F);color:#fff;
+  padding:.45rem .8rem;border-radius:24px;font-size:.78rem;font-weight:600;
+  box-shadow:0 3px 12px rgba(229,55,0,.3);cursor:pointer;
+  display:flex;align-items:center;gap:.3rem;touch-action:manipulation
+}
+.float-top .dot{width:8px;height:8px;background:#fff;border-radius:50%;animation:blink 1s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* ===== Image Modal ===== */
+.img-modal-overlay{
+  display:none;position:fixed;top:0;left:0;right:0;bottom:0;
+  background:rgba(0,0,0,.75);z-index:250;justify-content:center;align-items:center;padding:1.5rem
+}
+.img-modal-overlay.show{display:flex}
+.img-modal{
+  background:#fff;border-radius:18px;max-width:400px;width:100%;overflow:hidden;
+  box-shadow:0 8px 40px rgba(0,0,0,.25);animation:bounceIn .3s ease
+}
+.img-modal-header{display:flex;align-items:center;justify-content:space-between;padding:.85rem 1rem .6rem;border-bottom:1px solid #F1F3F4}
+.img-modal-header h3{font-size:1rem;font-weight:700;flex:1}
+.img-modal-close{background:#F1F3F4;border:none;width:2rem;height:2rem;border-radius:50%;font-size:1.1rem;color:var(--gray);cursor:pointer}
+.img-modal-body{padding:.8rem;text-align:center}
+.img-modal-body .img-wrap{width:100%;min-height:180px;border-radius:12px;overflow:hidden;background:#E8EAED;display:flex;align-items:center;justify-content:center}
+.img-modal-body .img-wrap img{width:100%;display:block}
+.img-nav{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:.5rem}
+.img-nav-btn{background:#F1F3F4;border:none;width:2rem;height:2rem;border-radius:50%;font-size:1rem;color:#3C4043;cursor:pointer;touch-action:manipulation}
+.img-nav-btn:active{background:#E8EAED}
+.img-nav-btn:disabled{opacity:.3}
+.img-counter{font-size:.8rem;color:var(--gray)}
+.img-dots{display:flex;justify-content:center;gap:.3rem;margin-top:.3rem}
+.img-dot{width:7px;height:7px;border-radius:50%;background:#DADCE0;transition:all .2s}
+.img-dot.active{background:var(--blue);width:9px;height:9px}
+.img-hint{font-size:.78rem;color:var(--gray);margin-top:.4rem}
+
+/* ===== Tag styles ===== */
+.tag{display:inline-block;padding:.15rem .55rem;border-radius:8px;font-size:.72rem;font-weight:600;margin-right:.25rem}
+.tag-red{background:#FCE8E6;color:var(--red)}
+.tag-green{background:#E8F5E9;color:var(--green)}
+.tag-blue{background:#E8F0FE;color:var(--blue)}
+
+/* ===== Utility ===== */
+.text-gray{color:var(--gray)}
+.text-sm{font-size:.82rem}
+.mt-sm{margin-top:.4rem}
+.mb-sm{margin-bottom:.4rem}
+</style>
+</head>
+<body>
+
+<!-- ========== HERO BANNER ========== -->
+<div class="hero">
+  <h1>👋 哈喽新同学！<br>我是你的<strong>学长</strong><span class="wave">🫡</span></h1>
+  <div class="hero-badge">🏫 河南师范大学 · 平原湖校区</div>
+  <p class="hero-tagline">📍 新乡市平原示范区 · 2026级专属新生指南<br>学姐学长踩过的坑，你别再踩了！</p>
+</div>
+
+<!-- ========== 时间线导航 ========== -->
+<div class="timeline-nav" id="timelineNav">
+  <a href="#sec-reg"    class="tnav-item hot">📋 报到</a>
+  <a href="#sec-map"    class="tnav-item">🗺️ 地图</a>
+  <a href="#sec-dorm"   class="tnav-item">🛏️ 宿舍</a>
+  <a href="#sec-net"    class="tnav-item">📶 网络</a>
+  <a href="#sec-study"  class="tnav-item">📖 学习</a>
+  <a href="#sec-life"   class="tnav-item">🎉 生活</a>
+  <a href="#sec-avoid"  class="tnav-item warn">⚠️ 避坑</a>
+  <a href="#sec-qr"     class="tnav-item">💬 找我</a>
+</div>
+
+<!-- ====== 避坑内容移至第7节 ====== -->
+
+<!-- ========== 2. 报到须知 ========== -->
+<div class="sec" id="sec-reg">
+<div class="sec-title">
+  <span class="sicon">📋</span> 报到须知
+  <span class="stag stag-hot">含清单</span>
+</div>
+
+<div class="card">
+  <h4>报到时间 & 地点</h4>
+  <p class="text-sm">📅 2026年9月X日-X日 | 📍 平原湖校区正门各学院迎新帐篷</p>
+  <p class="text-sm text-gray mt-sm">⚠️ 建议按通知书规定时间到校，提前到无法安排宿舍。</p>
+</div>
+
+<div class="card">
+  <h4>必带证件清单（点击勾选准备）</h4>
+  <ul class="checklist" id="checklistBox1">
+    <li data-id="0"><span class="check-box">✓</span>录取通知书</li>
+    <li data-id="1"><span class="check-box">✓</span>身份证及复印件（建议5份）</li>
+    <li data-id="2"><span class="check-box">✓</span>高考准考证</li>
+    <li data-id="3"><span class="check-box">✓</span>一寸/二寸证件照 各10张（蓝底+白底）</li>
+    <li data-id="4"><span class="check-box">✓</span>党/团组织关系证明</li>
+    <li data-id="5"><span class="check-box">✓</span>户口迁移证（仅需迁移户口者）</li>
+    <li data-id="6"><span class="check-box">✓</span>银行卡（建行卡）+ 少量现金</li>
+  </ul>
+  <div class="check-counter" id="checkCounter1">已准备 <span>0</span> / 7</div>
+</div>
+
+<div class="card">
+  <h4>报到流程（4步搞定）</h4>
+  <div class="steps">
+    <div class="step-row"><span class="step-num">1</span><span class="step-text">找到各学院迎新帐篷（志愿者举牌引导，别理陌生人）</span></div>
+    <div class="step-arrow">↓</div>
+    <div class="step-row"><span class="step-num">2</span><span class="step-text">核验身份 + 交材料（身份证、通知书、照片等）</span></div>
+    <div class="step-arrow">↓</div>
+    <div class="step-row"><span class="step-num">3</span><span class="step-text">领取校园卡 + 宿舍钥匙</span></div>
+    <div class="step-arrow">↓</div>
+    <div class="step-row"><span class="step-num">4</span><span class="step-text">志愿者带你到宿舍 → 收拾床铺 → 认识室友！</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <h4>来校交通指南</h4>
+  <p class="text-sm text-gray mb-sm">点击展开详情 ↓</p>
+  <div class="acc-item"><div class="acc-head">🚄 新乡东站（高铁站）<span class="acc-arrow">▼</span></div>
+    <div class="acc-body"><p>🚖 打车约25分钟/20-25元，直接说"河师大平原湖校区"<br>🚌 K1路公交到"河南师范大学"站，约40分钟</p></div>
+  </div>
+  <div class="acc-item"><div class="acc-head">🚂 新乡火车站<span class="acc-arrow">▼</span></div>
+    <div class="acc-body"><p>🚖 打车约30分钟/25-30元<br>🚌 K5路或K20路直达，约45分钟</p></div>
+  </div>
+  <div class="acc-item"><div class="acc-head">🚗 自驾<span class="acc-arrow">▼</span></div>
+    <div class="acc-body"><p>📍 导航"河南师范大学平原湖校区"<br>⚠️ 报到当天建议8:00前到，校内临时停车区<br>📌 京港澳高速"新乡"出口下，沿平原路向东约8公里</p></div>
+  </div>
+</div>
+</div>
+
+<!-- ========== 3. 校园地图 ========== -->
+<div class="sec" id="sec-map">
+<div class="sec-title"><span class="sicon">🗺️</span> 校园地图与设施</div>
+
+<div class="card">
+  <h4>主要建筑（点击查看实拍图）</h4>
+  <div class="building-grid">
+    <div class="building-item" data-building="classroom">
+      <span class="bi-icon">🏢</span><span class="bi-name">教学楼</span><span class="bi-desc">向真楼、向知楼、向心楼等</span>
+    </div>
+    <div class="building-item" data-building="library">
+      <span class="bi-icon">📚</span><span class="bi-name">图书馆</span><span class="bi-desc">3万㎡ · 藏书50万册</span>
+    </div>
+    <div class="building-item" data-building="canteen">
+      <span class="bi-icon">🍽️</span><span class="bi-name">食堂</span><span class="bi-desc">两层 · 风味档口齐全</span>
+    </div>
+    <div class="building-item" data-building="dorm">
+      <span class="bi-icon">🛏️</span><span class="bi-name">宿舍区</span><span class="bi-desc">六人间 · 上床下桌</span>
+    </div>
+    <div class="building-item" data-building="playground">
+      <span class="bi-icon">🏃</span><span class="bi-name">操场</span><span class="bi-desc">塑胶跑道+球场</span>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h4>生活服务点</h4>
+  <ul style="list-style:none;font-size:.85rem;line-height:2">
+    <li>🛒 <strong>超市</strong>：宿舍区一层，日用零食齐全</li>
+    <li>📦 <strong>快递</strong>：菜鸟驿站（宿舍区北门），地址填"新乡市平原示范区河南师范大学平原湖校区"</li>
+    <li>🖨️ <strong>打印店</strong>：图书馆一楼/教学楼一楼</li>
+    <li>🏦 <strong>ATM</strong>：建行（餐厅入口）、农行（超市旁）</li>
+  </ul>
+</div>
+</div>
+
+<!-- ========== 4. 宿舍生活 ========== -->
+<div class="sec" id="sec-dorm">
+<div class="sec-title">
+  <span class="sicon">🛏️</span> 宿舍生活
+  <span class="stag stag-new">含好物</span>
+</div>
+
+<div class="card">
+  <h4>宿舍配置</h4>
+  <ul style="list-style:none;font-size:.85rem;line-height:2">
+    <li>🏠 标准<strong>六人间</strong>，<strong>上床下桌</strong></li>
+    <li>❄️ <strong>中央空调</strong> + <strong>暖气</strong>（冬暖夏凉）</li>
+    <li>🚿 <strong>独立卫浴</strong> + 阳台</li>
+    <li>🧺 每层公共洗衣房（扫码3元/次）、直饮水机</li>
+    <li>🌙 门禁<strong>23:00关门</strong>，宿舍不断电</li>
+  </ul>
+  <div class="senior-note">
+    <span class="sn-avatar">💡</span>
+    <span><strong>学长提醒：</strong>开学第一周建议和室友一起做宿舍公约（值日表 + 作息协商 + 访客规则），四年室友关系的关键一步！</span>
+  </div>
+</div>
+
+<div class="card">
+  <h4>💧 水电充值</h4>
+  <p class="text-sm">⚡ 电费：学校水电<strong>全免</strong>，无需缴纳</p>
+  <p class="text-sm mt-sm">💧 热水：校园卡刷卡或支付宝"完美校园"小程序，按流量计费</p>
+</div>
+
+<div class="card">
+  <h4>🛒 宿舍好物推荐（学长学姐亲测）</h4>
+  <div class="good-grid">
+    <div class="good-item">
+      <div class="gi-emoji">🛏️</div>
+      <div class="gi-name">一体式床帘</div>
+      <div class="gi-why">遮光+防蚊+隐私，一劳永逸</div>
+    </div>
+    <div class="good-item">
+      <div class="gi-emoji">🔌</div>
+      <div class="gi-name">魔方插座</div>
+      <div class="gi-why">3USB+3插孔，比排插好用10倍</div>
+    </div>
+    <div class="good-item">
+      <div class="gi-emoji">💡</div>
+      <div class="gi-name">酷毙灯</div>
+      <div class="gi-why">磁吸上床，学习刷剧两不误</div>
+    </div>
+    <div class="good-item">
+      <div class="gi-emoji">🗄️</div>
+      <div class="gi-name">桌面收纳盒</div>
+      <div class="gi-why">桌面空间翻倍的秘诀</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h4>违禁品清单（会查！）</h4>
+  <ul style="list-style:none;font-size:.85rem;line-height:1.9">
+    <li style="color:var(--red)">🔥 <strong>大功率电器</strong>：电热毯、电暖器、电磁炉、电饭煲（自动跳闸）</li>
+    <li style="color:var(--red)">🔪 管制刀具、易燃易爆品</li>
+    <li style="color:var(--red)">🐱 宠物（猫、狗、仓鼠一律不允许）</li>
+    <li style="color:var(--red)">🍺 酒类及含酒精饮品</li>
+  </ul>
+</div>
+</div>
+
+<!-- ========== 5. 校园网络（独立成节） ========== -->
+<div class="sec" id="sec-net">
+<div class="sec-title">
+  <span class="sicon">📶</span> 校园网络
+  <span class="stag stag-hot">必看</span>
+</div>
+
+<div class="card">
+  <h4>WiFi全覆盖</h4>
+  <p class="text-sm">📶 <strong>校园WiFi全覆盖</strong>，凭学号登录即可使用。</p>
+  <p class="text-sm mt-sm">💻 宿舍楼WiFi需连接校园网 → <strong>必须办理校园卡</strong>。可加学长微信办理：19693581750</p>
+  <p class="text-sm mt-sm">🔐 宿舍配有<strong>千兆有线网口</strong>，即插即用。</p>
+</div>
+</div>
+
+<!-- ========== 6. 学习指南 ========== -->
+<div class="sec" id="sec-study">
+<div class="sec-title"><span class="sicon">📖</span> 学习指南</div>
+
+<div class="card">
+  <h4>选课系统</h4>
+  <p class="text-sm">🔗 <strong>jw.htu.edu.cn</strong>（校内/VPN访问）</p>
+  <p class="text-sm">📅 每学期第1-2周，分三轮：预选→正选→补退选</p>
+</div>
+
+<div class="card">
+  <h4>常用平台</h4>
+  <ul style="list-style:none;font-size:.85rem;line-height:2">
+    <li>🏫 教务系统：<strong>jw.htu.edu.cn</strong></li>
+    <li>📱 超星学习通：签到+作业+网课</li>
+    <li>🌐 智慧树：通识选修课平台</li>
+    <li>📧 学校邮箱：学号@htu.edu.cn</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h4>图书馆</h4>
+  <ul style="list-style:none;font-size:.85rem;line-height:2">
+    <li>📅 <strong>每日8:00-22:00</strong></li>
+    <li>📚 限借10册/借期30天/可续借15天</li>
+    <li>📖 一楼24小时自习室（刷校园卡）</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h4>自习/考研教室</h4>
+  <ul style="list-style:none;font-size:.85rem;line-height:2">
+    <li>🏢 教学楼A栋2-4层（开放至22:00）</li>
+    <li>📖 图书馆一楼24小时自习室</li>
+    <li>🎯 教学楼B栋5层：考研专用</li>
+  </ul>
+</div>
+</div>
+
+<!-- ========== 7. 校园生活 ========== -->
+<div class="sec" id="sec-life">
+<div class="sec-title"><span class="sicon">🎉</span> 校园生活</div>
+
+<div class="card">
+  <h4>食堂美食推荐</h4>
+  <ul style="list-style:none;font-size:.85rem;line-height:1.9">
+    <li>🍜 一楼<strong>牛肉拉面</strong> — 汤浓面筋道，加蛋更满足</li>
+    <li>🍛 二楼<strong>麻辣香锅</strong> — 自选现炒，辣度可选</li>
+    <li>🥟 早餐<strong>胡辣汤+油条</strong> — 地道河南味</li>
+    <li>🍗 <strong>炸鸡饭</strong> — 外酥里嫩配沙拉酱</li>
+    <li>🧋 餐厅入口<strong>奶茶店</strong> — 杨枝甘露和芋泥波波</li>
+  </ul>
+  <p class="text-sm text-gray mt-sm">💰 人均：早餐4-8元 / 午晚餐10-18元 / 月伙食费600-900元</p>
+</div>
+
+<div class="card">
+  <h4>校园周边</h4>
+  <div class="snack-btn" onclick="openSnackStreet()">
+    <span class="snack-icon">🍢</span><span class="snack-text">小吃街 · 点击查看实拍</span><span class="snack-arrow">›</span>
+  </div>
+  <p class="text-sm" style="padding:.3rem 0">🌳 <strong>公园</strong>：教学楼后平原湖公园，免费，适合跑步野餐</p>
+  <p class="text-sm">🎬 <strong>电影院</strong>：宝龙广场万达影城，学生证享折扣</p>
+</div>
+
+<div class="card">
+  <h4>社团/学生会</h4>
+  <p class="text-sm">🎪 开学第2-3周"百团大战"在操场招新 — 推荐：计算机协会、音乐社、摄影社、篮球社、演讲协会</p>
+</div>
+
+<div class="card">
+  <h4>校历</h4>
+  <ul style="list-style:none;font-size:.85rem;line-height:1.9">
+    <li>📅 第一学期：9月初-1月中旬（18周）</li>
+    <li>📅 第二学期：2月下旬-7月初（18周）</li>
+    <li>🏖️ 寒假约5周 / ☀️ 暑假约7周</li>
+    <li>🎓 考试周：每学期最后2周</li>
+  </ul>
+</div>
+</div>
+
+<!-- ========== 7. 避坑 & 防骗 ========== -->
+<div class="sec" id="sec-avoid">
+<div class="sec-title">
+  <span class="sicon">⚠️</span> 避坑 & 防骗指南
+  <span class="stag stag-warn">开学必看</span>
+</div>
+
+<div class="card" style="border-left:4px solid var(--red)">
+  <h4>学长被坑血泪史 🔥</h4>
+  <div class="senior-note">
+    <span class="sn-avatar">😤</span>
+    <span><strong>学长踩坑：</strong>大一时有个自称"辅导员"的人加我微信让我交200元资料费……还好我没转！记住：<strong>正规收费走学校系统，绝不私下转给个人账户！</strong></span>
+  </div>
+  <div class="senior-note">
+    <span class="sn-avatar">💀</span>
+    <span><strong>学姐踩坑：</strong>开学第一天有人上门推销"学校必买英语词典"，238一套。后来发现超市才卖40块。凡是主动上门推销的，<strong>一律拒绝</strong>。</span>
+  </div>
+</div>
+
+<div class="card">
+  <h4>常见新生骗局清单</h4>
+  <ul style="list-style:none;font-size:.88rem;line-height:1.8">
+    <li>🛑 <strong>冒充学长推销</strong>：英语报/词典/学习资料，学校从不强制购买</li>
+    <li>🛑 <strong>刷单兼职</strong>：日入300元是诱饵，让你垫资后消失</li>
+    <li>🛑 <strong>校园贷/套路贷</strong>：低息诱你上钩，利滚利上征信</li>
+    <li>🛑 <strong>冒充辅导员</strong>：QQ/微信私聊收资料费——给辅导员打电话确认</li>
+    <li>🛑 <strong>假冒志愿者</strong>：帮你提行李后索要搬运费</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h4>安全热线</h4>
+  <p class="text-sm" style="line-height:1.8">📞 全国反诈专线：<strong style="color:var(--red)">96110</strong><br>📞 校园保卫处：0373-XXXXXXXX<br>🏥 校医院急诊：0373-XXXXXXXX（学生活动中心一层）</p>
+</div>
+
+<div class="card">
+  <h4>校医院就诊流程</h4>
+  <div class="steps">
+    <div class="step-row"><span class="step-num">1</span><span class="step-text">携带校园卡到校医院挂号</span></div>
+    <div class="step-arrow">↓</div>
+    <div class="step-row"><span class="step-num">2</span><span class="step-text">医生诊断开具处方</span></div>
+    <div class="step-arrow">↓</div>
+    <div class="step-row"><span class="step-num">3</span><span class="step-text">取药/治疗（覆盖大学生医保）</span></div>
+  </div>
+  <p class="text-sm mt-sm" style="color:var(--red)">🚨 紧急情况立刻拨打120，同时通知辅导员和校医院！</p>
+</div>
+</div>
+
+<!-- ========== 8. 学长答疑 ========== -->
+<div class="sec" id="sec-qr">
+<div class="sec-title"><span class="sicon">💬</span> 学长在线答疑</div>
+
+<div class="card" style="text-align:center">
+  <p style="font-size:.92rem;color:var(--text);line-height:1.6">
+    你是<strong>2026级新生</strong>吗？<br>加学长微信，拉你进<strong>新生交流群</strong>～<br>校区相关问题随时问，看到即回 ❤️
+  </p>
+</div>
+
+<!-- ========== 底部二维码 ========== -->
+<div class="qr-section">
+  <h3>扫码加学长微信</h3>
+  <p style="font-size:.88rem;opacity:.9;margin-bottom:.5rem">任何关于平原湖校区的问题，直接问我！</p>
+  <div class="qr-img-box">
+    <img src="二维码/8bde87885b4af6c2797f4e1ccb06bbd9.jpg" alt="学长微信二维码" onerror="this.src='二维码/wechat-qr-compressed.jpg'">
+  </div>
+  <p class="qr-tip">👆 长按此图片 → 保存到手机 → 微信扫一扫</p>
+</div>
+</div>
+
+<!-- ========== 浮动按钮 ========== -->
+<div class="float-top" onclick="document.querySelector('#sec-qr').scrollIntoView({behavior:'smooth'})">
+  <span class="dot"></span> 加学长微信
+</div>
+
+<!-- ========== 图片弹窗 ========== -->
+<div class="img-modal-overlay" id="imgModalOverlay">
+  <div class="img-modal">
+    <div class="img-modal-header">
+      <h3 id="imgModalTitle"></h3>
+      <button class="img-modal-close" id="imgModalClose">✕</button>
+    </div>
+    <div class="img-modal-body">
+      <div class="img-wrap"><img id="imgModalImg" src="" alt="图片"></div>
+      <div class="img-nav" id="imgNav" style="display:none">
+        <button class="img-nav-btn" id="imgPrevBtn">‹</button>
+        <span class="img-counter" id="imgCounter">1/6</span>
+        <button class="img-nav-btn" id="imgNextBtn">›</button>
+      </div>
+      <div class="img-dots" id="imgDots"></div>
+      <p class="img-hint">📷 左右箭头或滑动浏览</p>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ============ Checklist Engine ============ */
+function initChecklist(boxId,counterId){
+  var list=document.getElementById(boxId),c=document.getElementById(counterId);
+  var items=list.querySelectorAll('li'),checked=new Set();
+  function upd(){c.innerHTML='已准备 <span>'+checked.size+'</span> / '+items.length}
+  items.forEach(function(li){li.addEventListener('click',function(){
+    var id=this.dataset.id;
+    if(checked.has(id)){checked.delete(id);this.classList.remove('checked')}
+    else{checked.add(id);this.classList.add('checked')}
+    upd()
+  })});upd()
+}
+initChecklist('checklistBox1','checkCounter1');
+
+/* ============ Accordion ============ */
+document.querySelectorAll('.acc-item').forEach(function(el){
+  el.querySelector('.acc-head').addEventListener('click',function(){el.classList.toggle('open')})
+});
+
+/* ============ Image Gallery ============ */
+var galleryImages=[],galleryIdx=0;
+function openGallery(title,images){
+  galleryImages=images;galleryIdx=0;
+  document.getElementById('imgModalTitle').textContent=title;
+  document.getElementById('imgNav').style.display=images.length>1?'flex':'none';
+  renderGallery(0);
+  document.getElementById('imgModalOverlay').classList.add('show');
+}
+function renderGallery(i){
+  galleryIdx=i;
+  document.getElementById('imgModalImg').src=galleryImages[i];
+  document.getElementById('imgCounter').textContent=(i+1)+' / '+galleryImages.length;
+  document.getElementById('imgPrevBtn').disabled=(i===0);
+  document.getElementById('imgNextBtn').disabled=(i===galleryImages.length-1);
+  var dots='';
+  for(var j=0;j<galleryImages.length;j++){dots+='<span class="img-dot'+(j===i?' active':'')+'"></span>'}
+  document.getElementById('imgDots').innerHTML=dots
+}
+document.getElementById('imgPrevBtn').onclick=function(){if(galleryIdx>0)renderGallery(galleryIdx-1)};
+document.getElementById('imgNextBtn').onclick=function(){if(galleryIdx<galleryImages.length-1)renderGallery(galleryIdx+1)};
+document.getElementById('imgModalClose').onclick=function(){document.getElementById('imgModalOverlay').classList.remove('show')};
+document.getElementById('imgModalOverlay').onclick=function(e){if(e.target===this)this.classList.remove('show')};
+
+// Touch slide
+var touchStartX=0;
+document.getElementById('imgModalImg').addEventListener('touchstart',function(e){touchStartX=e.touches[0].clientX});
+document.getElementById('imgModalImg').addEventListener('touchend',function(e){
+  if(galleryImages.length<=1)return;
+  var diff=e.changedTouches[0].clientX-touchStartX;
+  if(Math.abs(diff)>40){if(diff<0&&galleryIdx<galleryImages.length-1)renderGallery(galleryIdx+1);else if(diff>0&&galleryIdx>0)renderGallery(galleryIdx-1)}
+});
+
+/* ============ Buildings ============ */
+var buildingData={
+  classroom:{name:'🏢 教学楼',imgs:['教学楼照片/05e8b16af2a66f56c26cc8b477f55df8.jpg','教学楼照片/84fc1e66e269bc8338787cb76f703487.jpg','教学楼照片/9d7f7b5c7a5048385a4be3f045e503d3.jpg','教学楼照片/ae8439448cbefcdf2f7a6f1020f4f58a.jpg','教学楼照片/b50351cf6dae41559b5e218f5a4a9cb2.jpg','教学楼照片/f5d5f723f8155f8a225845b9520b1e19.jpg']},
+  library:{name:'📚 图书馆',imgs:['图书馆/19b8e8d03b9d1379555ecc16658edb46.jpg','图书馆/2ef708ba21f8a015f332bd90d076b1cd.jpg','图书馆/75b42f47c50990ad4f4cec552bd3eff8.jpg','图书馆/9b6800001904377930bf728e6c902800.jpg']},
+  canteen:{name:'🍽️ 食堂',imgs:['食堂/fb774abe431ebd27b29e1b682c6f18d6.jpg']},
+  dorm:{name:'🛏️ 宿舍区',imgs:['data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="240"%3E%3Crect fill="%2316a34a" width="400" height="240" rx="8"/%3E%3Ctext x="200" y="115" text-anchor="middle" fill="white" font-size="20"%3E📸 宿舍区照片%3C/text%3E%3Ctext x="200" y="145" text-anchor="middle" fill="white" font-size="14"%3E（放入宿舍区文件夹自动替换）%3C/text%3E%3C/svg%3E']},
+  playground:{name:'🏃 操场',imgs:['操场/49f0297518b1b58e70a909fc4a6907bb.jpg','操场/5dd8d9b71495d7ee640c127730f5e299.jpg','操场/a01c6c592e5d01848f9bbae89434e18d.jpg','操场/a0d26bd0a553741824fb52892f44f5d6.jpg']}
+};
+document.querySelectorAll('.building-item').forEach(function(el){el.addEventListener('click',function(){
+  var d=buildingData[this.dataset.building];if(d)openGallery(d.name,d.imgs)
+})});
+
+/* ============ Snack Street ============ */
+function openSnackStreet(){openGallery('🍢 小吃街',['小吃街/3be4a3d7c48755a96a29f0aebc78387c.jpg','小吃街/3cee48951d7c789b4cf2e76aecec8465.jpg','小吃街/574c672bfdcb4b227ae8527f9261c858.jpg','小吃街/d504c06e9498ff4f9b93ff3e212e45e4.jpg','小吃街/e1221a7485a2dd9d627e5d69a1d0ced8.jpg'])}
+
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.getElementById('imgModalOverlay').classList.remove('show')});
+</script>
+</body>
+</html>
