@@ -189,6 +189,7 @@ body{
   display:flex;align-items:center;gap:.3rem;touch-action:manipulation
 }
 .float-top .dot{width:8px;height:8px;background:#fff;border-radius:50%;animation:blink 1s infinite}
+.float-top.hide{opacity:0;pointer-events:none;transition:opacity .3s}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 
 /* ===== Image Modal ===== */
@@ -667,6 +668,14 @@ document.querySelectorAll('.building-item').forEach(function(el){el.addEventList
 function openSnackStreet(){openGallery('🍢 小吃街',['小吃街/3be4a3d7c48755a96a29f0aebc78387c.jpg','小吃街/3cee48951d7c789b4cf2e76aecec8465.jpg','小吃街/574c672bfdcb4b227ae8527f9261c858.jpg','小吃街/d504c06e9498ff4f9b93ff3e212e45e4.jpg','小吃街/e1221a7485a2dd9d627e5d69a1d0ced8.jpg'])}
 
 document.addEventListener('keydown',function(e){if(e.key==='Escape')document.getElementById('imgModalOverlay').classList.remove('show')});
-</script>
+
+/* ============ 浮动按钮滚动隐藏 ============ */
+window.addEventListener('scroll', function(){
+  var btn = document.querySelector('.float-top');
+  var qrSec = document.getElementById('sec-qr');
+  if (!btn || !qrSec) return;
+  var qrTop = qrSec.getBoundingClientRect().top;
+  btn.classList.toggle('hide', qrTop < window.innerHeight);
+});</script>
 </body>
 </html>
